@@ -3,10 +3,9 @@ import { Link } from "react-router-dom";
 import  PixIcon  from "@mui/icons-material/Pix";
 import { Box,Typography, useTheme } from "@mui/material";
 import FlexBetween from "@/components/FlexBetween";
-// eslint-disable-next-line
-type Props = {};
 
-const Navbar = (props: Props) => {
+
+const Navbar = () => {
   const { palette } = useTheme();
   const [selected,setSelected] = useState("dashboard");
   return (
@@ -29,7 +28,8 @@ const Navbar = (props: Props) => {
             textDecoration: "inherit",
             textTransform: "capitalize"
           }}>dashboard</Link> 
-                  <Link to="/predictions" onClick={()=>setSelected("predictions")}
+          {" "}
+         <Link to="/predictions" onClick={()=>setSelected("predictions")}
           style={{
             color: selected ==="predictions"? "inherit" : palette.grey[700],
             textDecoration: "inherit",
